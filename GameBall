@@ -1,0 +1,13 @@
+CLS
+RANDOMIZE (TIMER)
+LOCATE 10, 20: PRINT "УГАДАЙ ГДЕ ШАРИК?"
+A = 99 * RND(1)
+IF A <= 33 THEN B = 1 ELSE IF A > 66 THEN B = 3 ELSE B = 2
+LOCATE 11, 20: PRINT " _ _ _ "
+LOCATE 12, 20: PRINT "/ \ / \ / \"
+LOCATE 13, 20: PRINT " 1 2 3"
+INPUT "ВВЕДИ НОМЕР СТАКАНА ", C
+IF C = B THEN PRINT "УГАДАЛ! МОЛОДЕЦ!" ELSE PRINT "НЕ УГАДАЛ! НЕПОВЕЗЛО!"
+LOCATE 11, 20: PRINT " "
+LOCATE 12, 20: PRINT "\_/ \_/ \_/ "
+LOCATE 12, 17 + 4 * B: PRINT "O"
